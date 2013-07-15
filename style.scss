@@ -4,7 +4,6 @@
 
 body {
     font-family: Georgia, serif;
-    font-size: 1em;
     padding: 0 .5em;
 }
 
@@ -91,9 +90,9 @@ header, #main-content, footer {
 }
 
 @media only screen and (min-width:30em) {
-    p {
+ p {
     text-align: justify;
-    }
+ }
 }
 
 @media only screen and (min-width:48em) {
@@ -153,46 +152,50 @@ header, #main-content, footer {
     }    
     h1.site-name {
         @include span-columns(6);
-        @include shift(3);
+        @include shift(.5);
+    }
+    nav {
+        @include span-columns(11);
+        @include shift(.5);
     }
     article {
         header {
             h1 {
                 @include span-columns(8 of 12);
-                @include shift(1);
+                @include shift(2);
             }
         }
         .intro {
             @include span-columns(8 of 12);
-            @include shift(1);
-        }        
-        figure.article-cover {
-            @include span-columns(12 of 12);
-        }
-        h2, h3, h4, h5, h6, p {
             @include shift(2);
-        }
-
+        }        
         h2, h3, h4, h5, h6 {
-            @include span-columns(6 of 12);
+            @include span-columns(12 of 12);
         }        
         p {
-            @include span-columns(6 of 12);
+            @include span-columns(10 of 12);
             @include omega();
             margin-top: 0;
         }
         blockquote {
-            @include span-columns(8);
+            @include span-columns(12);
+            margin: 2em 0;
             p {
-                @include span-columns(8 of 8);
+                @include span-columns(10);
                 @include omega();
-                @include shift(1);
+                @include shift(-2);
             }
             cite {
-                @include span-columns(8 of 8);
-                text-align: right;
+                @include span-columns(10);
+                text-align: left;
             }
         }
     }
-
+    .article-cover {
+        @include span-columns(6 of 12);
+    }
+    .article-body {
+        @include span-columns(6 of 12);
+        @include omega();
+    }
 }

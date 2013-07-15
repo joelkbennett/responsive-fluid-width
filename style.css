@@ -453,7 +453,6 @@ table {
 
 body {
   font-family: Georgia, serif;
-  font-size: 1em;
   padding: 0 .5em; }
 
 img {
@@ -615,8 +614,17 @@ header, #main-content, footer {
     float: left;
     margin-right: 2.35765%;
     width: 48.82117%;
-    margin-left: 25.58941%; }
+    margin-left: 4.2649%; }
     h1.site-name:last-child {
+      margin-right: 0; }
+
+  nav {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 91.4702%;
+    margin-left: 4.2649%; }
+    nav:last-child {
       margin-right: 0; }
 
   article header h1 {
@@ -624,7 +632,7 @@ header, #main-content, footer {
     float: left;
     margin-right: 2.35765%;
     width: 65.88078%;
-    margin-left: 8.5298%; }
+    margin-left: 17.05961%; }
     article header h1:last-child {
       margin-right: 0; }
   article .intro {
@@ -632,30 +640,21 @@ header, #main-content, footer {
     float: left;
     margin-right: 2.35765%;
     width: 65.88078%;
-    margin-left: 8.5298%; }
+    margin-left: 17.05961%; }
     article .intro:last-child {
       margin-right: 0; }
-  article figure.article-cover {
-    display: block;
-    float: left;
-    margin-right: 2.35765%;
-    width: 100%; }
-    article figure.article-cover:last-child {
-      margin-right: 0; }
-  article h2, article h3, article h4, article h5, article h6, article p {
-    margin-left: 17.05961%; }
   article h2, article h3, article h4, article h5, article h6 {
     display: block;
     float: left;
     margin-right: 2.35765%;
-    width: 48.82117%; }
+    width: 100%; }
     article h2:last-child, article h3:last-child, article h4:last-child, article h5:last-child, article h6:last-child {
       margin-right: 0; }
   article p {
     display: block;
     float: left;
     margin-right: 2.35765%;
-    width: 48.82117%;
+    width: 82.94039%;
     margin-right: 0;
     margin-top: 0; }
     article p:last-child {
@@ -664,23 +663,41 @@ header, #main-content, footer {
     display: block;
     float: left;
     margin-right: 2.35765%;
-    width: 65.88078%; }
+    width: 100%;
+    margin: 2em 0; }
     article blockquote:last-child {
       margin-right: 0; }
     article blockquote p {
       display: block;
       float: left;
-      margin-right: 3.57866%;
-      width: 100%;
+      margin-right: 2.35765%;
+      width: 82.94039%;
       margin-right: 0;
-      margin-left: 12.94733%; }
+      margin-left: -17.05961%; }
       article blockquote p:last-child {
         margin-right: 0; }
     article blockquote cite {
       display: block;
       float: left;
-      margin-right: 3.57866%;
-      width: 100%;
-      text-align: right; }
+      margin-right: 2.35765%;
+      width: 82.94039%;
+      text-align: left; }
       article blockquote cite:last-child {
-        margin-right: 0; } }
+        margin-right: 0; }
+
+  .article-cover {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 48.82117%; }
+    .article-cover:last-child {
+      margin-right: 0; }
+
+  .article-body {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-right: 0; }
+    .article-body:last-child {
+      margin-right: 0; } }
