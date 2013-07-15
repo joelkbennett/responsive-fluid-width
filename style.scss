@@ -1,0 +1,198 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import "normalize";
+
+body {
+    font-family: Georgia, serif;
+    font-size: 1em;
+    padding: 0 .5em;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1.site-name {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.intro { 
+  font-size: 1.5em;
+}
+
+nav {
+    border-bottom: thin solid #ddd;
+    margin-bottom: 2em;
+    text-align: center;
+    ul { 
+        padding: 0;
+    }
+    li {
+        @include inline-block;
+    }
+}
+
+article {
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0 0 .5em 0;
+    }
+    h1 {
+        font-size: 2em;
+    }
+}
+
+blockquote {
+    margin-bottom: 2em;
+}
+
+blockquote p {
+    font-size: 2em;
+    font-style: italic;
+    margin-bottom: .25em;
+    padding: 0;
+    text-align: left;
+}
+
+blockquote p:before {
+    content: "\2018";
+    font-weight: bold;
+}
+
+blockquote p:after {
+    content: "\2019";
+    font-weight: bold;
+}
+
+cite {
+    font-size: 1.25em;
+}
+
+cite:before {
+    content: "\2014";
+}
+
+figure {
+    @include clearfix;
+    border-bottom: thin solid #bbb;
+    margin: 0 0 3em 0;
+}
+
+figcaption {
+    @include span-columns(11);
+    font-family: sans-serif;
+    font-size: .8em;
+    padding: .5em 0;
+    text-align: right;
+}
+
+header, #main-content, footer {
+    @include span-columns(4 of 4)
+}
+
+@media only screen and (min-width:30em) {
+    p {
+    text-align: justify;
+    }
+}
+
+@media only screen and (min-width:48em) {
+    header, #main-content, footer {
+        @include span-columns(6 of 6)
+    }
+    body {
+        font-size: 1.125em;
+        padding: 0;
+    }    
+    h1.site-name {
+        font-size: 4em;
+    }
+    article {
+        padding: 0 5em 0 5em;
+    }
+}
+
+@media only screen and (min-width:60em) {
+    header, #main-content, footer {
+        @include span-columns(10 of 12);
+        @include shift(1);
+    }
+    h1.site-name, nav {
+        text-align: left;
+    }
+    h1.site-name {
+        margin-top: 2em;
+    }
+    nav {
+        @include span-columns(10);
+        @include shift(1);
+        @include position(absolute, 0px 0 0 0px);
+        border-bottom: thin solid #ddd;
+        ul {
+            margin-right: 2em;
+        }
+    }    
+    article {
+        padding: 0;
+        header {
+            @include shift(0);
+        }
+    }
+    .intro, p {
+        text-align: left;
+    }
+    p {
+        line-height: 1.5em;
+    }
+}
+
+@media only screen and (min-width:82em) {
+    header, #main-content, footer {
+        @include span-columns(12 of 12);
+        @include shift(0);
+    }    
+    h1.site-name {
+        @include span-columns(6);
+        @include shift(3);
+    }
+    article {
+        header {
+            h1 {
+                @include span-columns(8 of 12);
+                @include shift(1);
+            }
+        }
+        .intro {
+            @include span-columns(8 of 12);
+            @include shift(1);
+        }        
+        figure.article-cover {
+            @include span-columns(12 of 12);
+        }
+        h2, h3, h4, h5, h6, p {
+            @include shift(2);
+        }
+
+        h2, h3, h4, h5, h6 {
+            @include span-columns(6 of 12);
+        }        
+        p {
+            @include span-columns(6 of 12);
+            @include omega();
+            margin-top: 0;
+        }
+        blockquote {
+            @include span-columns(8);
+            p {
+                @include span-columns(8 of 8);
+                @include omega();
+                @include shift(1);
+            }
+            cite {
+                @include span-columns(8 of 8);
+                text-align: right;
+            }
+        }
+    }
+
+}
