@@ -11,8 +11,31 @@ img {
     max-width: 100%;
 }
 
+a {
+    border-bottom: thin dotted #aaa;
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: yellow;
+    border: none;
+    color: #333;
+}
+
+.site-logo {
+    @include clearfix;
+    height: 5em;
+    margin: 1em 0 0 0;
+    width: 100%;
+    svg {
+        margin: 0 auto;
+    }
+}
+
 h1.site-name {
     font-size: 2.5em;
+    margin-top: 0;
     text-align: center;
 }
 
@@ -24,11 +47,23 @@ nav {
     border-bottom: thin solid #ddd;
     margin-bottom: 2em;
     text-align: center;
+    text-transform: uppercase;
+    a {
+        border: none;
+    }
     ul { 
         padding: 0;
     }
     li {
         @include inline-block;
+        border-right: thin solid #ddd;
+        margin-right: 1em;
+        padding-right: 1em;
+    }
+    li:last-child {
+        border: none;
+        margin-right: 0;
+        padding-right: 0;
     }
 }
 
@@ -38,6 +73,12 @@ article {
     }
     h1 {
         font-size: 2em;
+    }
+}
+
+p {
+    a {
+        font-style: italic;
     }
 }
 
@@ -90,9 +131,13 @@ header, #main-content, footer {
 }
 
 @media only screen and (min-width:30em) {
- p {
-    text-align: justify;
- }
+    .site-logo {
+        margin-bottom: 2em;
+        height: 8em;
+    }
+    p {
+        text-align: justify;
+    }
 }
 
 @media only screen and (min-width:48em) {
@@ -102,7 +147,11 @@ header, #main-content, footer {
     body {
         font-size: 1.125em;
         padding: 0;
-    }    
+    }
+    .site-logo {
+        height: 45em;
+        margin: -30em 0 1em 0;
+    }
     h1.site-name {
         font-size: 4em;
     }
@@ -116,6 +165,15 @@ header, #main-content, footer {
         @include span-columns(10 of 12);
         @include shift(1);
     }
+    .site-logo {
+        @include span-columns(12 0f 12);
+        height: 12em;
+        margin: 4em 0 0 0;
+        svg {
+            @include span-columns(4 of 12);
+            @include shift(8);
+        }
+    }    
     h1.site-name, nav {
         text-align: left;
     }
@@ -129,6 +187,9 @@ header, #main-content, footer {
         border-bottom: thin solid #ddd;
         ul {
             margin-right: 2em;
+        }
+        li:first-child {
+            padding-left: 1em;
         }
     }    
     article {
@@ -150,9 +211,19 @@ header, #main-content, footer {
         @include span-columns(12 of 12);
         @include shift(0);
     }    
+    .site-logo {
+        @include position(absolute, 0px 0 0 -300px);
+        float: none;
+        height: 400px;
+        margin: 4em 0 0 0;
+        svg {
+            @include span-columns(4 of 12);
+            margin: 0;
+        }
+    }   
     h1.site-name {
         @include span-columns(6);
-        @include shift(.5);
+        @include shift(1);
     }
     nav {
         @include span-columns(11);
