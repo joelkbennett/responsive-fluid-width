@@ -479,7 +479,8 @@ a:hover {
   .site-logo:after {
     clear: both; }
   .site-logo svg {
-    margin: 0 auto; }
+    margin: 0 auto;
+    opacity: .25; }
 
 h1.site-name {
   font-size: 2.5em;
@@ -516,6 +517,13 @@ article h1, article h2, article h3, article h4, article h5, article h6 {
   margin: 0 0 .5em 0; }
 article h1 {
   font-size: 2em; }
+
+.byline {
+  font-size: .75em; }
+
+.post-date {
+  display: inline;
+  border-bottom: thick solid #aaa; }
 
 p a {
   font-style: italic; }
@@ -596,7 +604,7 @@ header, #main-content, footer {
 
   .site-logo {
     height: 45em;
-    margin: -30em 0 1em 0; }
+    margin: -37em 0 1em 0; }
 
   h1.site-name {
     font-size: 4em; }
@@ -677,7 +685,7 @@ header, #main-content, footer {
   .site-logo {
     position: absolute;
     top: 0px;
-    left: -300px;
+    left: 1200px;
     float: none;
     height: 400px;
     margin: 4em 0 0 0; }
@@ -754,7 +762,7 @@ header, #main-content, footer {
       margin-right: 2.35765%;
       width: 82.94039%;
       margin-right: 0;
-      margin-left: -17.05961%; }
+      margin-left: -8.5298%; }
       article blockquote p:last-child {
         margin-right: 0; }
     article blockquote cite {
@@ -770,7 +778,7 @@ header, #main-content, footer {
     display: block;
     float: left;
     margin-right: 2.35765%;
-    width: 48.82117%; }
+    width: 44.55627%; }
     .article-cover:last-child {
       margin-right: 0; }
 
@@ -779,6 +787,7 @@ header, #main-content, footer {
     float: left;
     margin-right: 2.35765%;
     width: 48.82117%;
+    margin-left: 4.2649%;
     margin-right: 0; }
     .article-body:last-child {
       margin-right: 0; } }

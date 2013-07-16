@@ -30,6 +30,7 @@ a:hover {
     width: 100%;
     svg {
         margin: 0 auto;
+        opacity: .25;
     }
 }
 
@@ -74,6 +75,15 @@ article {
     h1 {
         font-size: 2em;
     }
+}
+
+.byline {
+    font-size: .75em;
+}
+
+.post-date {
+    display: inline;
+    border-bottom: thick solid #aaa;
 }
 
 p {
@@ -150,7 +160,7 @@ header, #main-content, footer {
     }
     .site-logo {
         height: 45em;
-        margin: -30em 0 1em 0;
+        margin: -37em 0 1em 0;
     }
     h1.site-name {
         font-size: 4em;
@@ -212,7 +222,7 @@ header, #main-content, footer {
         @include shift(0);
     }    
     .site-logo {
-        @include position(absolute, 0px 0 0 -300px);
+        @include position(absolute, 0px 0 0 1200px);
         float: none;
         height: 400px;
         margin: 4em 0 0 0;
@@ -254,7 +264,7 @@ header, #main-content, footer {
             p {
                 @include span-columns(10);
                 @include omega();
-                @include shift(-2);
+                @include shift(-1);
             }
             cite {
                 @include span-columns(10);
@@ -263,10 +273,11 @@ header, #main-content, footer {
         }
     }
     .article-cover {
-        @include span-columns(6 of 12);
+        @include span-columns(5.5 of 12);
     }
     .article-body {
         @include span-columns(6 of 12);
+        @include shift(.5);
         @include omega();
     }
 }
